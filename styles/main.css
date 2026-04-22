@@ -401,6 +401,15 @@ p:last-child { margin-bottom: 0; }
 .org-logo--scri { background: linear-gradient(135deg, #0e6e8b 0%, #14a6c8 100%); }   /* Seattle Children's teal */
 .org-logo--utep { background: linear-gradient(135deg, #ff5f1f 0%, #ff8a3d 100%); font-size: .65rem; } /* UTEP orange */
 
+/* Image-based org logo: white frame so colored marks read against any background */
+.org-logo--img {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  padding: 4px;
+  object-fit: contain;
+  box-shadow: none;
+}
+
 .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
 @media (max-width: 900px) { .cards { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 620px) { .cards { grid-template-columns: 1fr; } }
