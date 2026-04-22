@@ -67,7 +67,7 @@ p:last-child { margin-bottom: 0; }
 .muted { color: var(--ink-mute); font-weight: 400; }
 
 .container { max-width: var(--max); margin: 0 auto; padding-left: var(--pad); padding-right: var(--pad); }
-.section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+.section { padding: clamp(3rem, 7vw, 5.5rem) 0; scroll-margin-top: 80px; }
 .section-alt { background: var(--bg-alt); }
 .section-head { max-width: 720px; margin-bottom: 2.5rem; }
 .section-eyebrow {
@@ -523,4 +523,64 @@ p:last-child { margin-bottom: 0; }
   .timeline-item, .card, .skill-group, .pubs li { page-break-inside: avoid; }
   h1, h2, h3 { color: #000 !important; }
   .chips li { background: #f1f1f1 !important; color: #000 !important; border: 1px solid #ddd; }
+}
+
+/* ---------- Citation badge ---------- */
+.pub-title a {
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s ease, color .15s ease;
+}
+.pub-title a:hover { color: var(--accent-deep); border-bottom-color: var(--accent-deep); text-decoration: none; }
+.pub-cites {
+  display: inline-block;
+  margin-left: .35rem;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-size: .78rem;
+  font-weight: 600;
+  padding: .1rem .5rem;
+  border-radius: 999px;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
+/* ---------- "By the numbers" stats strip ---------- */
+.section-stats {
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.stats {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+@media (max-width: 720px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+.stats li {
+  display: flex; flex-direction: column; gap: .25rem;
+  padding: .75rem .5rem;
+  border-right: 1px solid var(--line);
+}
+.stats li:last-child { border-right: none; }
+@media (max-width: 720px) {
+  .stats li { border-right: none; border-bottom: 1px solid var(--line); padding-bottom: 1rem; }
+  .stats li:nth-last-child(-n+2) { border-bottom: none; }
+}
+.stat-num {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600;
+  color: var(--accent-deep);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.stat-plus { color: var(--accent); font-weight: 500; margin-left: 1px; }
+.stat-label {
+  font-size: .82rem;
+  color: var(--ink-soft);
+  letter-spacing: .02em;
 }
