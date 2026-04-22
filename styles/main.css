@@ -239,10 +239,9 @@ p:last-child { margin-bottom: 0; }
   border-bottom: 1px solid var(--line);
 }
 .hero-inner {
-  display: grid; grid-template-columns: 1.4fr 1fr;
-  gap: clamp(1.5rem, 4vw, 3rem); align-items: center;
+  display: block;
+  max-width: 760px;
 }
-@media (max-width: 860px) { .hero-inner { grid-template-columns: 1fr; } }
 
 .eyebrow {
   display: inline-block; margin: 0 0 1rem;
