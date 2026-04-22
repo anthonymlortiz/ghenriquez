@@ -374,41 +374,37 @@ p:last-child { margin-bottom: 0; }
 .timeline-body ul { padding-left: 1.1rem; color: var(--ink-soft); }
 .timeline-body li { margin-bottom: .35rem; }
 
-/* Org logo + heading row inside a timeline / education item */
-.org-row {
-  display: flex; align-items: center; gap: .85rem;
-  margin-bottom: .8rem;
+/* Org logo strip — horizontal logotype displayed above the role title.
+   Fixed height, auto width, transparent background. */
+.org-logo-strip {
+  display: block;
+  height: 32px;
+  width: auto;
+  max-width: 220px;
+  margin: 0 0 .65rem;
+  object-fit: contain;
+  object-position: left center;
 }
-.org-row > div { min-width: 0; }
-.org-row h3 { margin-bottom: .1rem; }
-.org-row .org { margin: 0; }
-.org-logo {
-  flex: none;
-  width: 44px; height: 44px;
-  display: inline-grid; place-items: center;
-  border-radius: 10px;
+
+/* Monogram badge variant — same vertical slot, styled as a colored pill
+   for organizations whose real logo we don't display. */
+.org-mono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 0 .85rem;
+  border-radius: 8px;
+  color: #fff;
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: .72rem;
-  letter-spacing: .04em;
-  color: #fff;
-  background: var(--accent);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12);
+  font-size: .85rem;
+  letter-spacing: .08em;
   text-transform: uppercase;
   user-select: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12);
 }
-.org-logo--bms  { background: linear-gradient(135deg, #6e2a8e 0%, #9b34c2 100%); }   /* BMS purple-ish */
-.org-logo--scri { background: linear-gradient(135deg, #0e6e8b 0%, #14a6c8 100%); }   /* Seattle Children's teal */
-.org-logo--utep { background: linear-gradient(135deg, #ff5f1f 0%, #ff8a3d 100%); font-size: .65rem; } /* UTEP orange */
-
-/* Image-based org logo: white frame so colored marks read against any background */
-.org-logo--img {
-  background: #ffffff;
-  border: 1px solid var(--line);
-  padding: 4px;
-  object-fit: contain;
-  box-shadow: none;
-}
+.org-mono--utep { background: linear-gradient(135deg, #ff5f1f 0%, #ff8a3d 100%); }
 
 .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
 @media (max-width: 900px) { .cards { grid-template-columns: 1fr 1fr; } }
