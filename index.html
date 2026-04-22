@@ -8,11 +8,21 @@
   <meta name="author" content="Gabriela Henriquez" />
   <meta name="theme-color" content="#0f3a5f" />
 
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Gabriela Henriquez, Ph.D." />
-  <meta property="og:description" content="Ph.D. scientist — biopharmaceutical process development, gene therapy, and translational research." />
+  <meta property="og:description" content="Biopharmaceutical scientist focused on process development, gene therapy, and translational research." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gabriela Henriquez, Ph.D." />
+  <meta name="twitter:description" content="Biopharmaceutical scientist focused on process development, gene therapy, and translational research." />
+  <meta name="twitter:image" content="assets/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,6 +89,10 @@
           <p class="eyebrow">Scientist · Seattle, WA</p>
           <h1>Gabriela Henriquez, <span class="h1-suffix">Ph.D.</span></h1>
           <p class="role-line">Biopharmaceutical scientist focused on process development, gene therapy, and translational research.</p>
+          <p class="status-pill">
+            <span class="status-dot" aria-hidden="true"></span>
+            Currently exploring opportunities in biopharmaceutical process development.
+          </p>
           <p class="lede">
             Early-career scientist with hands-on expertise in mammalian cell culture,
             flow cytometry, in&nbsp;vivo models, and molecular biology — applied across
@@ -86,7 +100,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">Get in touch</a>
-            <a class="btn btn-ghost" href="assets/Gabriela%20Henriquez_Resume.docx" download>
+            <a class="btn btn-ghost" href="assets/Gabriela_Henriquez_Resume.pdf" download>
               Download résumé
               <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1Zm-7 16a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/></svg>
             </a>
@@ -114,6 +128,12 @@
     <section id="about" class="section">
       <div class="container">
         <div class="bio">
+          <div class="bio-aside">
+            <div class="bio-photo-frame">
+              <img class="bio-photo" src="assets/gaby.jpeg" alt="Portrait of Gabriela Henriquez" width="200" height="200" loading="lazy" decoding="async" />
+            </div>
+          </div>
+          <div class="bio-main">
           <header class="bio-head">
             <p class="section-eyebrow">About</p>
             <h2>Bio</h2>
@@ -150,8 +170,9 @@
               <li><a class="bio-link email-link" href="#" data-user="ghenriquez16" data-domain="outlook.com" rel="noopener">Email</a></li>
               <li><a class="bio-link" href="https://scholar.google.com/citations?user=QRzJqYUAAAAJ&hl=en" rel="noopener" target="_blank">Google Scholar</a></li>
               <li><a class="bio-link" href="https://www.linkedin.com/in/gabriela-henriquezphd/" rel="noopener" target="_blank">LinkedIn</a></li>
-              <li><a class="bio-link" href="assets/Gabriela%20Henriquez_Resume.docx" download>Résumé</a></li>
+              <li><a class="bio-link" href="assets/Gabriela_Henriquez_Resume.pdf" download>Résumé</a></li>
             </ul>
+          </div>
           </div>
         </div>
 
@@ -208,8 +229,13 @@
               <p class="timeline-place">Seattle, WA</p>
             </div>
             <div class="timeline-body">
-              <h3>Gene Delivery &amp; Editing Process Development, Intern</h3>
-              <p class="org">Bristol Myers Squibb</p>
+              <div class="org-row">
+                <span class="org-logo org-logo--bms" aria-hidden="true">BMS</span>
+                <div>
+                  <h3>Gene Delivery &amp; Editing Process Development, Intern</h3>
+                  <p class="org">Bristol Myers Squibb</p>
+                </div>
+              </div>
               <ul>
                 <li>Supported Adeno-Associated Virus (AAV) workflow optimization, contributing to improved viral yield and purity using high-throughput screening.</li>
                 <li>Applied statistical tools (JMP) to analyze experimental results and summarize findings.</li>
@@ -225,8 +251,13 @@
               <p class="timeline-place">Seattle, WA</p>
             </div>
             <div class="timeline-body">
-              <h3>Quality Assurance Specialist II</h3>
-              <p class="org">Seattle Children's Research Institute</p>
+              <div class="org-row">
+                <span class="org-logo org-logo--scri" aria-hidden="true">SC</span>
+                <div>
+                  <h3>Quality Assurance Specialist II</h3>
+                  <p class="org">Seattle Children's Research Institute</p>
+                </div>
+              </div>
               <ul>
                 <li>Maintained and updated standard operating procedures (SOPs) and quality records, ensuring regulatory compliance.</li>
                 <li>Improved documentation and reporting systems, achieving a 75% increase in compliance rate.</li>
@@ -241,8 +272,13 @@
               <p class="timeline-place">El Paso, TX</p>
             </div>
             <div class="timeline-body">
-              <h3>Graduate Research &amp; Teaching Assistant</h3>
-              <p class="org">The University of Texas at El Paso (UTEP)</p>
+              <div class="org-row">
+                <span class="org-logo org-logo--utep" aria-hidden="true">UTEP</span>
+                <div>
+                  <h3>Graduate Research &amp; Teaching Assistant</h3>
+                  <p class="org">The University of Texas at El Paso (UTEP)</p>
+                </div>
+              </div>
               <ul>
                 <li>Conducted translational neuroscience research using in&nbsp;vitro and in&nbsp;vivo models to study neurodegeneration, synaptic dysfunction, and behavioral outcomes.</li>
                 <li>Developed and optimized behavioral and molecular assays to evaluate neuroprotective compounds, leading to peer-reviewed publications.</li>
@@ -442,7 +478,7 @@
           </li>
           <li>
             <span class="contact-label">Résumé</span>
-            <a class="contact-value" href="assets/Gabriela%20Henriquez_Resume.docx" download>Download (.docx)</a>
+            <a class="contact-value" href="assets/Gabriela_Henriquez_Resume.pdf" download>Download (PDF)</a>
           </li>
         </ul>
       </div>
