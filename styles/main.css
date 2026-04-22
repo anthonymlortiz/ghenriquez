@@ -81,6 +81,69 @@ p:last-child { margin-bottom: 0; }
 .two-col .col-body { color: var(--ink-soft); max-width: 65ch; font-size: 1.02rem; }
 @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
 
+/* ---------- Bio (academic-style) ---------- */
+.bio { display: grid; grid-template-columns: 200px 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+@media (max-width: 720px) { .bio { grid-template-columns: 1fr; } }
+.bio-head h2 { margin-top: 0; }
+.bio-body { color: var(--ink-soft); max-width: 68ch; font-size: 1.04rem; }
+.bio-body p { margin-bottom: 1rem; }
+.bio-body strong { color: var(--ink); font-weight: 600; }
+.bio-body a { color: var(--accent-deep); border-bottom: 1px solid rgba(11, 90, 114, .25); }
+.bio-body a:hover { border-bottom-color: var(--accent-deep); text-decoration: none; }
+
+.bio-links {
+  list-style: none;
+  display: flex; flex-wrap: wrap; gap: .5rem .35rem;
+  margin-top: 1.5rem; padding-top: 1.25rem;
+  border-top: 1px dashed var(--line);
+  align-items: center;
+}
+.bio-links li { display: inline-flex; align-items: center; }
+.bio-links li + li::before {
+  content: "·"; color: var(--ink-mute); margin: 0 .55rem; font-weight: 600;
+}
+.bio-link {
+  font-weight: 500; color: var(--accent-deep);
+  border-bottom: 1px solid rgba(11, 90, 114, .35);
+  padding-bottom: 1px;
+}
+.bio-link:hover { border-bottom-color: var(--accent-deep); text-decoration: none; }
+
+/* ---------- News / Recent updates ---------- */
+.news { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+.news-head { margin-bottom: 1rem; }
+.news-head h3 {
+  font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600;
+  letter-spacing: -0.005em;
+  position: relative; padding-bottom: .5rem;
+}
+.news-head h3::after {
+  content: ""; display: block;
+  width: 36px; height: 2px; background: var(--accent);
+  margin-top: .5rem; border-radius: 2px;
+}
+.news-list { list-style: none; display: flex; flex-direction: column; }
+.news-list li {
+  display: grid; grid-template-columns: 110px 1fr; gap: 1.25rem;
+  padding: .85rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: .98rem;
+}
+.news-list li:last-child { border-bottom: 1px solid var(--line); }
+@media (max-width: 540px) {
+  .news-list li { grid-template-columns: 1fr; gap: .15rem; padding: .8rem 0; }
+}
+.news-date {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600; color: var(--accent-deep);
+  font-size: .92rem;
+  letter-spacing: .01em;
+  padding-top: .1em;
+}
+.news-body em { color: var(--ink); font-style: italic; }
+.news-body a { color: var(--accent-deep); }
+
 .site-header {
   position: sticky; top: 0; z-index: 50;
   background: rgba(255,255,255,.85);
@@ -204,6 +267,27 @@ p:last-child { margin-bottom: 0; }
   background: radial-gradient(closest-side, rgba(255,255,255,.18), transparent 70%);
 }
 .hero-card-inner { position: relative; display: flex; flex-direction: column; gap: 1.5rem; height: 100%; justify-content: space-between; }
+
+/* Circular photo frame — overflow:hidden + scaled image crops the
+   LinkedIn #OpenToWork ring (outer ~15% of the badge) cleanly. */
+.hero-photo-frame {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
+}
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  /* Zoom in to crop out the green #OpenToWork ring */
+  transform: scale(1.32);
+  transform-origin: center 45%;
+}
 .initials {
   width: 96px; height: 96px; border-radius: 22px;
   display: grid; place-items: center;
